@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
-  const greeting = 'Header Component!';
+  const greeting = 'Tic Tac Toe';
 
   return <div class="header">{greeting}</div>;
 };

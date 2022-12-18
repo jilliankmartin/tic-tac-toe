@@ -1,7 +1,9 @@
 .board {
-  background-color: blueviolet;
+  background-color: aqua;
   min-height: 70vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr [col-start]);
-  grid-column-gap: 10px;
+  column-gap: 12px;
+  row-gap: 12px;
+  margin: 10%;
 }

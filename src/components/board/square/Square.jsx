@@ -1,8 +1,11 @@
 import React from 'react';
 import './Square.css';
 
-const Square = ({classIndex, value, squares, setSquares, round, setRound, setComputersTurn}) => {
+const Square = ({classIndex, value, squares, setSquares, turn, setTurn, round, setRound, computersTurn, setComputersTurn}) => {
   const onClickHandler = () => {
+    if (computersTurn) {
+      return;
+    }
     setSquares(
       squares.map((square) => {
         if (square.id === classIndex) {
@@ -15,10 +18,11 @@ const Square = ({classIndex, value, squares, setSquares, round, setRound, setCom
       })
     );
     setRound(round + 1)
+    setTurn(turn + 1)
     setComputersTurn(true)
   }
 
-  return <div className={`square ref-${classIndex}`} onClick={onClickHandler}>{value}</div>;
+  return <div className={`square ref-${classIndex}`} onClick={onClickHandler}><span className="value">{value}</span></div>;
 };
 
 export default Square;

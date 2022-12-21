@@ -1,6 +1,11 @@
 .square {
   background-color: black;
   color: white;
+  font-size: 6em;
+}
+
+.value {
+
 }
 
 .ref-1 {
